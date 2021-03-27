@@ -11,7 +11,7 @@ class Map {
         let xindex = x;
         let yindex = y;
         for (let i of range(this.width)) {
-            block = this.block[xindex][yindex];
+            let block = this.block[xindex][yindex];
             for (let j of range(this.height)) {
                 block.draw(xindex, yindex, canvas);
                 yindex += block.height;

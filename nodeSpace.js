@@ -24,7 +24,7 @@ class NodeSpace {
 
 
 export function nodeSpaceFactory(nodeSpaceData) {
-    width = nodeSpaceData.width;
-    height = nodeSpaceData.height;
+    const width = nodeSpaceData.width;
+    const height = nodeSpaceData.height;
     return new NodeSpace(width, height, nodeList({width, height}));
 }

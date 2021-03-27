@@ -10,11 +10,14 @@ class Node extends Coordinate {
     lock() {
         this.locked = true;
     }
+    unlock() {
+        this.locked = false;
+    }
 }
 
 
 export function nodeList(data) {
-    list = mdList([data.width, data.height]);
+    const list = mdList([data.width, data.height]);
     for (let x of range(data.width)) {
         for (let y of range(data.height)) {
             list[x][y] = nodeFactory({coordinate: [x, y]});

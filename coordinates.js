@@ -4,8 +4,8 @@ import range from './utility.js';
 
 export class Coordinate extends IComparable{
     contructor(coordinate) {
-        self[0] = coordinate[0];
-        self[1] = coordinate[1];
+        this[0] = coordinate[0];
+        this[1] = coordinate[1];
     }
     compare(comparable) {
         if (! this.constructorCompare(comparable)) {

@@ -1,8 +1,7 @@
 class block {
-    constructor(width, height, showMethod) {
-        this.width = width;
-        this.height = height;
-        this.show = showMethod;
+    //Block is an entity that only ocupies one unity of space in the map
+    constructor(drawMethod) {
+        this.draw = drawMethod;
     }
 }
 
