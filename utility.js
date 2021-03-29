@@ -7,7 +7,13 @@ export function defVal(x, y) {
 
 
 export function inRange(region) {
-    return (number) => (number >= region[0]) && (number < region[1])
+    return (number) => {
+        const k = (number >= region[0]) && (number < region[1]);
+        if (! k) {
+            console.log(region[0], region[1]);
+        }
+        return k;
+    }
 }
 
 
@@ -15,7 +21,13 @@ export function inAxis(AxisList) {
     if (! isNaN(AxisList[0])) {
         return inRange(AxisList)
     }
-    return (mdNumber) => inAxis(AxisList[0])(mdNumber[0]) && inAxis(AxisList[1])(mdNumber[1]);
+    return (mdNumber) => {
+        let k = true;
+        for (let x of range(AxisList.length)) {
+            k = k && inAxis(AxisList[x])(mdNumber[x]);
+        }
+        return k;
+    }
 }
 
 
