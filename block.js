@@ -1,15 +1,19 @@
-class block {
-    //Block is an entity that only ocupies one unity of space in the map
-    constructor(drawMethod) {
-        this.draw = drawMethod;
+import DrawThing from './drawThing.js';
+import Coordinate from './coordinates.js';
+
+
+const NONE_IMAGE = '';
+
+
+export class Block extends DrawThing {
+    constructor(coordinate, image) {
+        super(coordinate, image);
     }
 }
 
 
-export default function blockFactory(blockData) {
-    return new block(
-        blockData.width,
-        blockData.height,
-        blackData.showMethod
-        );
+export class NoneBlock extends Block {
+    constructor(coordinate) {
+        super(coordinate, NONE_IMAGE);
+    }
 }

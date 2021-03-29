@@ -1,5 +1,5 @@
 import IComparable from './comparableInterface.js';
-import range from './utility.js';
+import {range, inRange} from './utility.js';
 
 
 export class Coordinate extends IComparable{

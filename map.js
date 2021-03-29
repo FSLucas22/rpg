@@ -7,13 +7,13 @@ class Map {
         this.height = height;
         this.block = blockGrid;
     }
-    show(x, y, canvas) {
+    show(x, y) {
         let xindex = x;
         let yindex = y;
         for (let i of range(this.width)) {
             let block = this.block[xindex][yindex];
             for (let j of range(this.height)) {
-                block.draw(xindex, yindex, canvas);
+                block.draw(xindex, yindex);
                 yindex += block.height;
             }
             xindex += block.width;
