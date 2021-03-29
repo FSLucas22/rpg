@@ -7,13 +7,7 @@ export function defVal(x, y) {
 
 
 export function inRange(region) {
-    return (number) => {
-        const k = (number >= region[0]) && (number < region[1]);
-        if (! k) {
-            console.log(region[0], region[1]);
-        }
-        return k;
-    }
+    return (number) => k;
 }
 
 
