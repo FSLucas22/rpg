@@ -5,10 +5,26 @@
         <title>RPG</title>
     </head>
     <body>
-        <canvas id='canvas' height="500" width="500"></canvas>
+        <canvas id='canvas'></canvas>
         <script type='module'>
-            const canvas = document.getElementById('canvas')
-            const context = canvas.getContext('2d')
+
+            function showImage(context, path, position=[0, 0]) {
+                const image = new Image();
+                image.src = path;
+                image.addEventListener('load', () => {
+                    context.drawImage(image, position[0], position[1]);
+                }, false);
+            }
+
+            const canvas = document.getElementById('canvas');
+            canvas.width = 500;
+            canvas.height = 500;
+            const context = canvas.getContext('2d');
+            const path = 'testimag.png';
+            const position = [250, 250];
+
+            showImage(context, path, position);
+
         </script>
     </body>
 </html>

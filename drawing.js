@@ -65,6 +65,14 @@ class DrawMap {
         this.npcs = npcs;
         this.objects = objects;
     }
+    draw() {
+        return [
+            this.map,
+            this.objects,
+            this.npcs,
+            this.players,
+        ];
+    }
 }
 
 
@@ -105,4 +113,5 @@ class DrawScreen {
 
 
 function renderScreen(onScreen) {
+    
 }
